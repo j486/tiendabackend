@@ -4,7 +4,7 @@ const cors       = require('cors');
 const express    = require('express');
 const mongoose   = require('mongoose');
 const apiRoutes  = require('./routes');
-
+ 
 const app    = express();
 const PORT   = process.env.PORT || 3000;
 const DB_URI = process.env.DB_URI;
@@ -23,4 +23,4 @@ app.use('/api', apiRoutes);
 app.use(express.static(path.join(__dirname , 'public')));
 
 // SERVIDOR WEB
-app.listen(PORT, () => console.log("Servidor iniciado..."));
+app.listen(PORT, () => console.log(`Servidor iniciado en el puerto ${PORT}`));
